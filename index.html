@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xinyue Yu - Personal Portfolio</title>
+    <style>
+        :root {
+            --bg-color: #000000;
+            --text-primary: #f5f5f7;
+            --text-secondary: #86868b;
+            --accent-color: #2997ff;
+            --tag-bg: #1d1d1f;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            margin: 0;
+            padding: 0;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: saturate(180%) blur(20px);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            padding: 1rem 0;
+        }
+
+        nav a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin: 0 20px;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 1;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 100px 20px 40px;
+        }
+
+        header {
+            text-align: center;
+            padding: 8rem 0 5rem;
+        }
+
+        header h1 {
+            font-size: 4.5rem;
+            font-weight: 800;
+            letter-spacing: -0.05em;
+            margin: 0;
+            line-height: 1.1;
+        }
+
+        header p {
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+            margin-top: 15px;
+        }
+
+        section {
+            margin-bottom: 6rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #333;
+            padding-bottom: 1rem;
+        }
+
+        p, li {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 1.2rem;
+            padding-left: 0;
+        }
+
+        li strong {
+            color: var(--text-primary);
+            display: block;
+            font-size: 1.2rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .skills {
+            margin-top: 2rem;
+        }
+
+        .skills span {
+            display: inline-block;
+            background: var(--tag-bg);
+            color: var(--text-primary);
+            padding: 8px 16px;
+            margin: 0 8px 8px 0;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid #333;
+        }
+
+        a.link {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a.link:hover {
+            color: #5ac8fa;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            border-top: 1px solid #333;
+        }
+
+        /* 动画初始状态：透明且位置偏下 */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.5, 0, 0, 1), transform 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+
+        /* 动画激活状态：完全不透明且恢复原位 */
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href=" ">关于</a >
+    <a href="#experience">经历</a >
+    <a href="#activities">活动</a >
+    <a href="#contact">联系</a >
+</nav>
+
+<div class="container">
+    <header class="reveal">
+        <h1>Xinyue Yu</h1>
+        <p>Public Health Professional & Data Analyst</p >
+    </header>
+
+    <section id="about" class="reveal">
+        <h2>About Me</h2>
+        <p>约翰霍普金斯大学环境健康与工程硕士 (MHS)。专注于公共卫生研究、环境数据收集与统计分析，具备处理和管理复杂数据集的能力。</p >
+        <div class="skills">
+            <span>R</span>
+            <span>Python</span>
+            <span>SAS</span>
+            <span>ArcGIS Field Maps</span>
+            <span>Google Cloud</span>
+        </div>
+    </section>
+
+    <section id="experience" class="reveal">
+        <h2>Experience</h2>
+        <ul>
+            <li>
+                <strong>Research Assistant</strong>
+                CRPS Warriors Foundation
+            </li>
+            <li>
+                <strong>Social Media & Operations</strong>
+                BYOU Impact Foundation
+            </li>
+            <li>
+                <strong>实地调查员</strong>
+                TreesCount 2025 纽约市树木普查项目
+            </li>
+        </ul>
+    </section>
+
+    <section id="activities" class="reveal">
+        <h2>Activities</h2>
+        <ul>
+            <li>
+                <strong>音乐与合唱</strong>
+                NYC Otaku Choir, Xinsheng Chinese Choir, Press Start Orchestra
+            </li>
+            <li>
+                <strong>自然与生态</strong>
+                NYC Bird Alliance 参与者
+            </li>
+        </ul>
+    </section>
+
+    <section id="contact" class="reveal">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:your.email@example.com" class="link">your.email@example.com</a ></p >
+        <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank" class="link">Profile Link</a ></p >
+    </section>
+
+    <footer class="reveal">
+        <p>&copy; 2026 Xinyue Yu. All rights reserved.</p >
+    </footer>
+</div>
+
+<script>
+    // 页面加载完成后初始化观察器
+    document.addEventListener('DOMContentLoaded', () => {
+        const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15 // 元素露出 15% 时触发动画
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target); // 动画执行一次后取消观察，避免重复触发
+                }
+            });
+        }, options);
+
+        // 绑定所有带有 .reveal 类的元素
+        document.querySelectorAll('.reveal').forEach(element => {
+            observer.observe(element);
+        });
+    });
+</script>
+
+</body>
+</html>
